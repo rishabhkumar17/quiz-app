@@ -5,7 +5,7 @@ export const Questions = [
     optionB: 'Object-Based',
     optionC: 'Procedural',
     optionD: 'None of the above',
-    answer: 'Object-Oriented',
+    answer: 'optionA',
   },
   {
     prompt: 'Which of the following is not a JavaScript framework?',
@@ -13,6 +13,6 @@ export const Questions = [
     optionB: 'Vue',
     optionC: 'React',
     optionD: 'Cassandra',
-    answer: 'Cassandra',
+    answer: 'optionD',
   },
 ];

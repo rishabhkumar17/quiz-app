@@ -10,6 +10,15 @@ const Quiz = () => {
     setOptionChosen(option);
   };
 
+  const NextQuestion = () => {
+    if (Questions[currentQuestion].answer === optionChosen) {
+      alert('Correct Answer');
+    } else {
+      alert('Wrong Answer');
+    }
+    setCurrentQuestion(currentQuestion + 1);
+  };
+
   return (
     <div className="Quiz">
       <h2>{Questions[currentQuestion].prompt}</h2>
@@ -25,6 +34,7 @@ const Quiz = () => {
       <button onClick={() => Chosen('optionD')}>
         {Questions[currentQuestion].optionD}
       </button>
+      <button onClick={NextQuestion}>Next Question</button>
     </div>
   );
 };

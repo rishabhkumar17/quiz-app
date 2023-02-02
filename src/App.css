@@ -53,3 +53,8 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
+
+.Menu,
+.Quiz h2 {
+  color: whitesmoke;
+}
