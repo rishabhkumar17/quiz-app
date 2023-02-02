@@ -10,7 +10,7 @@ const Menu = () => {
       <label>Enter Your Name</label>
       <input
         type="text"
-        placeholder="Ex."
+        placeholder="Ex. John"
         onChange={(e) => setUserName(e.target.value)}
       />
       <button onClick={() => setGameState('Playing')}>Start Quiz</button>

@@ -34,6 +34,22 @@ button {
   font-weight: 600;
 }
 
+input::placeholder {
+  position: relative;
+  left: 5px;
+}
+
 button:hover {
   cursor: pointer;
+}
+
+.Quiz {
+  background-color: lightseagreen;
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
