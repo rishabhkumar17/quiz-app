@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import '../App.css';
 import { Questions } from '../helpers/Questions';
+import { useContext } from 'react';
+import { GameStateContext } from '../helpers/Contexts';
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState('');
+  const { score, setScore } = useContext(GameStateContext);
 
   const Chosen = (option) => {
     setOptionChosen(option);
@@ -12,10 +15,9 @@ const Quiz = () => {
 
   const NextQuestion = () => {
     if (Questions[currentQuestion].answer === optionChosen) {
-      alert('Correct Answer');
-    } else {
-      alert('Wrong Answer');
+      setScore(score + 1);
     }
+
     setCurrentQuestion(currentQuestion + 1);
   };
 
