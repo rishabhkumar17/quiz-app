@@ -57,6 +57,11 @@ button:hover {
 
 .Menu,
 .Quiz,
-.EndScreen h2 {
+.EndScreen h1,
+h2 {
   color: whitesmoke;
+}
+
+#nextQuestion {
+  width: 200px;
 }

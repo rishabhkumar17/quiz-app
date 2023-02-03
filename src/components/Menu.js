@@ -3,8 +3,7 @@ import { useContext } from 'react';
 import { GameStateContext } from '../helpers/Contexts';
 
 const Menu = () => {
-  const { gameState, setGameState, userName, setUserName } =
-    useContext(GameStateContext); //access state globally
+  const { setGameState, setUserName } = useContext(GameStateContext); //access state globally
   return (
     <div className="Menu">
       <label>Enter Your Name</label>
