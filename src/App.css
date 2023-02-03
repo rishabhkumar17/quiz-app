@@ -43,7 +43,8 @@ button:hover {
   cursor: pointer;
 }
 
-.Quiz {
+.Quiz,
+.EndScreen {
   background-color: lightseagreen;
   width: 500px;
   height: 500px;
@@ -55,6 +56,7 @@ button:hover {
 }
 
 .Menu,
-.Quiz h2 {
+.Quiz,
+.EndScreen h2 {
   color: whitesmoke;
 }

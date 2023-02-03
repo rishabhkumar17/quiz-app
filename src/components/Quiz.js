@@ -7,7 +7,8 @@ import { GameStateContext } from '../helpers/Contexts';
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState('');
-  const { score, setScore } = useContext(GameStateContext);
+  const { score, setScore, gameState, setGameState } =
+    useContext(GameStateContext);
 
   const Chosen = (option) => {
     setOptionChosen(option);
@@ -17,8 +18,11 @@ const Quiz = () => {
     if (Questions[currentQuestion].answer === optionChosen) {
       setScore(score + 1);
     }
-
     setCurrentQuestion(currentQuestion + 1);
+  };
+
+  const FinishQuiz = () => {
+    setGameState('Finished');
   };
 
   return (
@@ -36,7 +40,11 @@ const Quiz = () => {
       <button onClick={() => Chosen('optionD')}>
         {Questions[currentQuestion].optionD}
       </button>
-      <button onClick={NextQuestion}>Next Question</button>
+      {currentQuestion === Questions.length - 1 ? (
+        <button onClick={FinishQuiz}>Finish Quiz</button>
+      ) : (
+        <button onClick={NextQuestion}>Next Question</button>
+      )}
     </div>
   );
 };
